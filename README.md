@@ -1,6 +1,6 @@
 # USB Camera on Linux
 
-This repository provides Python code to connect a microscope, or another USB camera, to Linux and show its picture, take photos and record videos. It looks like this:
+This repository provides Python code to connect a microscope, or another USB camera, to Linux and show its video stream, take photos and record videos. It looks like this:
 
 ![GUI](/images/gui.png)
 
@@ -19,7 +19,7 @@ where `pip3` should be called instead of `pip` when appropriate to avoid acciden
 
 ## Command-line
 
-Command-line arguments are supported. Command-line arguments are the camaras to present. They are checked for validity and presented in a drop-down box. When `usb-camera` is called without arguments, it searches for connected cameras and presents them in a drop-down box. The video stream from the first camera is shown.
+Command-line arguments are supported. Command-line arguments are the cameras to present. They are checked for validity and presented in a drop-down box. When `usb-camera` is called without arguments, it searches for connected cameras and presents them in a drop-down box. The video stream from the first camera is shown initially.
 
 ## Acknowledgements 
 
