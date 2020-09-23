@@ -104,7 +104,11 @@ class CameraWidget(QWidget):
         self.cameras_scanned = False
         self.flip = None
         self.timer = None
-        self.icon_dir = os.path.join(os.path.dirname(sys.argv[0]), 'icons')
+        inst_dir = os.path.dirname(sys.argv[0])
+        if os.path.islink(sys.argv[0]):
+            inst_dir = os.path.join(inst_dir, os.path.dirname(
+                                       os.readlink(sys.argv[0])))
+        self.icon_dir = os.path.join(inst_dir, 'icons')
 
         # create queue of requests by threads for main thread and gui
         self.requests_queue = queue.Queue(5)
