@@ -307,7 +307,7 @@ class CameraWidget(QWidget):
                 return
         self.cam_width = int(self.cam.get(cv2.CAP_PROP_FRAME_WIDTH))
         self.cam_height = int(self.cam.get(cv2.CAP_PROP_FRAME_HEIGHT))
-        self.cam_fps = self.cam.get(cv2.CAP_PROP_FPS)
+        self.cam_fps = max(1, self.cam.get(cv2.CAP_PROP_FPS))
         self.pixmap_view.setMinimumSize(self.cam_width // 2,
                                         self.cam_height // 2)
         self.timer = QTimer()
